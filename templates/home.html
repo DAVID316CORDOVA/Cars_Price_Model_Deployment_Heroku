@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> CARS </title>
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <form action="{{ url_for('predict')}}"method="post">
+
+        <h1>Averigua el costo de un vehículo usado </h1>
+
+        
+    <div class="contenedor_izquierdo">
+        <div class="año_input">
+            <p> <h2 class="año">Año</h2> </p> 
+
+            <p> <input type="text" name="year" placeholder="Ingrese un año entre 1940 y 2020 " required="required" class="year" /> </p>
+            
+        </div>
+
+
+        <div>
+            <p>  <h2 class="fabricante">Fabricante</h2> </p>
+           
+            <p> 
+                <select  id="manufacturer" name="manufacturer" class="manufacturer" >
+    
+                    <script>
+            
+                        var select = document.getElementById("manufacturer");
+                        
+                        var manufacturer = {'acura': 'acura', 'alfa-romeo': 'alfa-romeo', 'aston-martin': 'aston-martin', 'audi': 'audi', 'bmw': 'bmw', 'buick': 'buick', 'cadillac': 'cadillac', 'chevrolet': 'chevrolet', 'chrysler': 'chrysler', 'datsun': 'datsun', 'dodge': 'dodge', 'ferrari': 'ferrari', 'fiat': 'fiat', 'ford': 'ford', 'gmc': 'gmc', 'harley-davidson': 'harley-davidson', 'hennessey': 'hennessey', 'honda': 'honda', 'hyundai': 'hyundai', 'infiniti': 'infiniti', 'jaguar': 'jaguar', 'jeep': 'jeep', 'kia': 'kia', 'land rover': 'land rover', 'lexus': 'lexus', 'lincoln': 'lincoln', 'mazda': 'mazda', 'mercedes-benz': 'mercedes-benz', 'mercury': 'mercury', 'mini': 'mini', 'mitsubishi': 'mitsubishi', 'morgan': 'morgan', 'nissan': 'nissan', 'pontiac': 'pontiac', 'porche': 'porche', 'ram': 'ram', 'rover': 'rover', 'saturn': 'saturn', 'subaru': 'subaru', 'toyota': 'toyota', 'volkswagen': 'volkswagen', 'volvo': 'volvo'}
+                        ;
+            
+                        
+                        for(index in manufacturer) {
+                            select.options[select.options.length] = new Option(manufacturer[index], index);
+                        }
+            
+                    </script>
+            
+                </select>
+            </p>
+        
+    
+        </div>
+
+
+        <div>
+            <p> <h2 class="condicion">Condición</h2> 
+            </p>
+
+            <p>
+                <select  id="condition" name="condition" class="condition">
+    
+                    <script>
+            
+                        var select = document.getElementById("condition");
+                        
+                        var condition = {'excellent': 'excellent', 'fair': 'fair', 'good': 'good', 'like new': 'like new', 'new': 'new', 'salvage': 'salvage'};
+                    
+                        for(index in condition) {
+                            select.options[select.options.length] = new Option(condition[index], index);
+                        }
+            
+                    </script>
+            
+                </select>
+            </p>
+            
+            
+        </div>
+
+        <div>
+            <p>
+            <h2 class="Cilindros">Cilindros</h2>
+            </p>
+
+            <p>
+                <select  id="cylinders" name="cylinders" class="cylinders">
+    
+                    <script>
+            
+                        var select = document.getElementById("cylinders");
+                        
+                        var cylinders = {'10 cylinders': '10 cylinders', '12 cylinders': '12 cylinders', '3 cylinders': '3 cylinders', '4 cylinders': '4 cylinders', '5 cylinders': '5 cylinders', '6 cylinders': '6 cylinders', '8 cylinders': '8 cylinders'};
+                        
+                        for(index in cylinders) {
+                            select.options[select.options.length] = new Option(cylinders[index], index);
+                        }
+            
+                    </script>
+            
+                </select>
+            </p>
+            
+        </div>
+
+
+        <div>
+            <p>
+                <h2 class="Combustible">Combustible</h2>
+            </p>
+            
+            <p>
+                <select  id="fuel" name="fuel" class="fuel">
+    
+                    <script>
+            
+                        var select = document.getElementById("fuel");
+                        
+                        var fuel = {'diesel': 'diesel', 'electric': 'electric', 'gas': 'gas', 'hybrid': 'hybrid'};
+        
+                        for(index in fuel) {
+                            select.options[select.options.length] = new Option(fuel[index], index);
+                        }
+            
+                    </script>
+            
+                </select>
+            </p>
+            
+        </div>
+
+
+        <div>
+            <p>
+                <h2 class="estado">Estado</h2>
+            </p>
+            
+            <p>
+                <select  id="title_status" name="title_status" class="title_status">
+                
+                    <script>
+            
+                        var select = document.getElementById("title_status");
+                        var title_status = {'clean': 'clean', 'lien': 'lien', 'missing': 'missing', 'parts only': 'parts only', 'rebuilt': 'rebuilt', 'salvage': 'salvage'};
+                        for(index in title_status) {
+                            select.options[select.options.length] = new Option(title_status[index], index);
+                        }
+            
+                    </script>
+            
+                </select>
+            </p>
+            
+        </div>
+
+    </div>
+
+
+    <div class="contenedor_derecho">
+
+        <div>
+            <p> <h2 class="transmision">Transmisión</h2> </p>
+
+            <p>
+                <select  id="transmission" name="transmission" class="transmission">
+                
+                    <script>
+            
+                        var select = document.getElementById("transmission");
+                        var transmission = {'automatic': 'automatic', 'manual': 'manual'};
+                        for(index in transmission) {
+                            select.options[select.options.length] = new Option(transmission[index], index);
+                        }
+            
+                    </script>
+            
+                </select>
+            </p>
+            
+        </div>
+
+        <div>
+
+            <p>
+                <h2 class="traccion">Tipo de tracción</h2>
+            </p>
+            
+            <p>
+                <select  id="drive" name="drive" class="drive">
+                
+                    <script>
+            
+                        var select = document.getElementById("drive");
+                        var drive = {'4wd': '4wd', 'fwd': 'fwd', 'rwd': 'rwd'};
+                        for(index in drive) {
+                            select.options[select.options.length] = new Option(drive[index], index);
+                        }
+            
+                    </script>
+            
+                </select>
+            </p>
+            
+        </div>
+
+        <div>
+            <p>
+                <h2 class="tamaño">Tamaño</h2>
+            </p>
+            
+            <p>
+                <select  id="size" name="size" class="size">
+                
+                    <script>
+            
+                        var select = document.getElementById("size");
+                        var size = {'compact': 'compact', 'full-size': 'full-size', 'mid-size': 'mid-size', 'sub-compact': 'sub-compact'};
+                        for(index in size) {
+                            select.options[select.options.length] = new Option(size[index], index);
+                        }
+            
+                    </script>
+            
+                </select>
+            </p>
+            
+        </div>
+
+        <div>
+            <p>
+                <h2 class="tipo">Tipo</h2>
+            </p>
+            
+            <p>
+                <select  id="type" name="type" class="type">
+    
+                    <script>
+            
+                        var select = document.getElementById("type");
+                        
+                        var type = {'SUV': 'SUV', 'bus': 'bus', 'convertible': 'convertible', 'coupe': 'coupe', 'hatchback': 'hatchback', 'mini-van': 'mini-van', 'offroad': 'offroad', 'pickup': 'pickup', 'sedan': 'sedan', 'truck': 'truck', 'van': 'van', 'wagon': 'wagon'};
+                        for(index in type) {
+                            select.options[select.options.length] = new Option(type[index], index);
+                        }
+            
+                    </script>
+            
+                </select>
+            </p>
+            
+        </div>
+
+
+        <div>
+            <p>
+                <h2 class="pintura">Color de pintura</h2>
+            </p>
+
+            <p>
+                <select  id="paint_color" name="paint_color" class="paint_color">
+    
+                    <script>
+            
+                        var select = document.getElementById("paint_color");
+                        var paint_color = {'black': 'black', 'blue': 'blue', 'brown': 'brown', 'custom': 'custom', 'green': 'green', 'grey': 'grey', 'orange': 'orange', 'purple': 'purple', 'red': 'red', 'silver': 'silver', 'white': 'white', 'yellow': 'yellow'};
+                        for(index in paint_color) {
+                            select.options[select.options.length] = new Option(paint_color[index], index);
+                        }
+            
+                    </script>
+            
+                </select>
+            </p>
+            
+            
+        </div>
+
+
+    </div>
+    
+
+    <br>
+    <button type="submit" class= "boton">Predecir</button>
+
+    <br>
+
+    <h3> 
+        {{prediction_text}}
+    </h3>
+    
+
+
+    </form>
+    
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body,html{
+    height: 100%;
+    background: linear-gradient(to top,rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(1.jpg);
+    background-size: cover;
+	background-repeat: repeat;
+	overflow: hidden;
+}
+
+.contenedor_izquierdo{
+	float:left
+}
+
+.contenedor_derecho{
+	float:left;
+	margin-left: 600px;
+}
+
+
+h1{
+	color: white;
+	font-size: 40px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	padding-top: 10px;
+	margin-left: 45px;
+	margin-bottom: 25px;
+}
+
+.año {
+	color:white;
+	
+	font-size: 30px;
+	padding-bottom: -220px;
+	margin-left: 60px;
+}
+
+.year{
+	margin-bottom: 20px;
+	float: left;
+	border-radius: 4px;
+	width: 320px;
+	margin-left: 122px;
+	font-size: 20px;
+	padding: 5px;
+	color: black;
+}
+
+
+.fabricante {
+	color:white;
+	float: left;
+	font-size: 30px;
+	padding-top: 10px;
+	margin-left: -55px;
+	
+}
+
+.manufacturer {
+	color:black;
+	float: left;
+	font-size: 20px;
+	margin-left: -55px;
+	border-radius: 4px;
+	margin-left: 40px;
+	height: 30px;
+	margin-top: 12px;
+	
+}
+
+.condicion {
+	color:white;
+	float: left;
+	font-size: 30px;
+	padding-top: 60px;
+	float: left;
+	margin-left: -348px;
+	
+}
+
+
+.condition {
+	color:black;
+	float: left;
+	font-size: 20px;
+	margin-left: -55px;
+	border-radius: 4px;
+	margin-left: 40px;
+	height: 30px;
+	margin-top: 65px;
+	margin-left: -168px;
+	
+}
+
+.Cilindros{
+	color:white;
+	float: left;
+	font-size: 30px;
+	padding-top: 120px;
+	float: left;
+	margin-left: -348px;
+
+}
+
+.cylinders {
+	color:black;
+	float: left;
+	font-size: 20px;
+	margin-left: -55px;
+	border-radius: 4px;
+	margin-left: 40px;
+	height: 30px;
+	margin-top: 120px;
+	margin-left: -168px;
+	
+}
+
+.Combustible{
+	color:white;
+	float: left;
+	font-size: 30px;
+	padding-top: 180px;
+	float: left;
+	margin-left: -348px;
+
+}
+
+.fuel {
+	color:black;
+	float: left;
+	font-size: 20px;
+	margin-left: -55px;
+	border-radius: 4px;
+	margin-left: 40px;
+	height: 30px;
+	margin-top: 180px;
+	margin-left: -168px;
+	
+}
+
+.estado{
+	color:white;
+	float: left;
+	font-size: 30px;
+	padding-top: 240px;
+	float: left;
+	margin-left: -348px;
+
+}
+
+
+.title_status {
+	color:black;
+	float: left;
+	font-size: 20px;
+	margin-left: -55px;
+	border-radius: 4px;
+	margin-left: 40px;
+	height: 30px;
+	margin-top: 240px;
+	margin-left: -168px;
+	
+}
+
+.transmision{
+	color:white;
+	float: left;
+	font-size: 30px;
+	padding-top: 0px;
+	float: left;
+	margin-left: -348px;
+
+}
+
+
+.transmission {
+	color:black;
+	float: left;
+	font-size: 20px;
+	margin-left: -55px;
+	border-radius: 4px;
+	margin-left: 40px;
+	height: 30px;
+	margin-top: 3px;
+	margin-left: -168px;
+	
+}
+
+.tracción{
+	color:white;
+	float: left;
+	font-size: 30px;
+	padding-top: 30px;
+	float: left;
+	margin-left: -348px;
+
+}
+
+.drive {
+	color:black;
+	float: left;
+	font-size: 20px;
+	margin-left: -55px;
+	border-radius: 4px;
+	margin-left: 40px;
+	height: 30px;
+	margin-top: 300px;
+	margin-left: -168px;
+	
+}
+
+
+
+
+
+
+
+
+button{
+	margin-left: 0px;
+	margin-top: 20px;
+	padding: 5px;
+	border: 8px;
+	border-radius: 5px;
+	color: rgb(153, 152, 160);
+	font-weight: bold;
+	cursor: pointer;
+	transition: 2s;
+	font-family: "monserrat";
+	font-size: 40px;
+	background: rgb(11, 31, 207);
+	position: relative;
+	overflow: hidden;
+}
+
+
+h3{
+	color: white;
+	font-size: 30px;
+	/* padding-top: 30px; */
+	text-align: center;
+	padding-left: 35px;
+}
